@@ -61,11 +61,11 @@ export const defaultMetadata: Metadata = {
             'max-snippet': -1,
         },
     },
-    verification: {
-        google: 'your-google-site-verification',
-        yandex: 'your-yandex-verification',
-        bing: 'your-bing-verification',
-    },
+    // verification: {
+    //     google: 'your-google-site-verification',
+    //     yandex: 'your-yandex-verification',
+    //     bing: 'your-bing-verification',
+    // },
 };
 
 export const generateStructuredData = (page: string) => {
