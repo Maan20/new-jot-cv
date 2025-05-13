@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SocialLinks } from './SocialLinks';
+import Image from 'next/image';
 
 export const Footer = () => {
     return (
@@ -8,7 +9,7 @@ export const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                     {/* Company Info */}
                     <div className="space-y-4">
-                        <h3 className="text-lg font-semibold text-gray-900">JotCV</h3>
+                        <Image src="/full-logo.png" alt="JotCV Logo" width={100} height={100} />
                         <p className="text-gray-600 text-sm">
                             Create professional resumes and video profiles with our free, no-signup required resume builder.
                         </p>
