@@ -86,41 +86,6 @@ export const Hero = () => {
 					</div>
 				</div>
 			</section>
-
-			{/* Footer Section */}
-			<footer className="bg-white py-12 border-t">
-				<div className="container mx-auto px-4">
-					<div className="grid md:grid-cols-4 gap-8">
-						<div>
-							<h3 className="text-lg font-semibold mb-4">JotCV</h3>
-							<p className="text-gray-600">Create professional resumes that stand out</p>
-						</div>
-						<div>
-							<h4 className="font-semibold mb-4">Quick Links</h4>
-							<ul className="space-y-2">
-								<li><Link href="/resume-builder" className="text-gray-600 hover:text-blue-600">Resume Builder</Link></li>
-								<li><Link href="/templates" className="text-gray-600 hover:text-blue-600">Templates</Link></li>
-								<li><Link href="/resume-parser" className="text-gray-600 hover:text-blue-600">Resume Parser</Link></li>
-							</ul>
-						</div>
-						<div>
-							<h4 className="font-semibold mb-4">Resources</h4>
-							<ul className="space-y-2">
-								<li><Link href="/blog" className="text-gray-600 hover:text-blue-600">Blog</Link></li>
-								<li><Link href="/help" className="text-gray-600 hover:text-blue-600">Help Center</Link></li>
-								<li><Link href="/faq" className="text-gray-600 hover:text-blue-600">FAQ</Link></li>
-							</ul>
-						</div>
-						<div>
-							<h4 className="font-semibold mb-4">Legal</h4>
-							<ul className="space-y-2">
-								<li><Link href="/privacy" className="text-gray-600 hover:text-blue-600">Privacy Policy</Link></li>
-								<li><Link href="/terms" className="text-gray-600 hover:text-blue-600">Terms of Service</Link></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</footer>
 		</div>
 	);
 };

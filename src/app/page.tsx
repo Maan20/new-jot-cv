@@ -6,19 +6,46 @@ import { QuestionsAndAnswers } from "home/QuestionsAndAnswers";
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-screen-2xl bg-dot px-8 pb-32 text-gray-900 lg:px-12">
-      <Hero />
-      <Steps />
-      <Features />
-      <Testimonials />
-      <QuestionsAndAnswers />
-      <footer className="bg-white border-t mt-auto">
-        <div className="container mx-auto px-4 py-6">
-          <p className="text-center text-text-secondary">
-            © 2024 JotCV. All rights reserved.
-          </p>
+    <div className="space-y-24">
+      {/* Hero Section with gradient background */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-white opacity-50" />
+        <div className="relative">
+          <Hero />
         </div>
-      </footer>
-    </main>
+      </section>
+
+      {/* Steps Section with subtle pattern */}
+      <section className="relative">
+        <div className="absolute inset-0 bg-dot opacity-5" />
+        <div className="relative">
+          <Steps />
+        </div>
+      </section>
+
+      {/* Features Section with gradient background */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-tr from-gray-50 to-white opacity-50" />
+        <div className="relative">
+          <Features />
+        </div>
+      </section>
+
+      {/* Testimonials Section with subtle pattern */}
+      <section className="relative">
+        <div className="absolute inset-0 bg-dot opacity-5" />
+        <div className="relative">
+          <Testimonials />
+        </div>
+      </section>
+
+      {/* FAQ Section with gradient background */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-white opacity-50" />
+        <div className="relative">
+          <QuestionsAndAnswers />
+        </div>
+      </section>
+    </div>
   );
 }

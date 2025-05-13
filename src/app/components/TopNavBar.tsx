@@ -34,6 +34,27 @@ const TopNavBar = () => {
             >
               Templates
             </Link>
+            <Link
+              href="/about"
+              className={`text-gray-600 hover:text-gray-900 ${pathname === '/about' ? 'font-medium text-blue-600' : ''
+                }`}
+            >
+              About Us
+            </Link>
+            <Link
+              href="/why-choose-us"
+              className={`text-gray-600 hover:text-gray-900 ${pathname === '/why-choose-us' ? 'font-medium text-blue-600' : ''
+                }`}
+            >
+              Why Choose Us
+            </Link>
+            <Link
+              href="/contact"
+              className={`text-gray-600 hover:text-gray-900 ${pathname === '/contact' ? 'font-medium text-blue-600' : ''
+                }`}
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
       </div>

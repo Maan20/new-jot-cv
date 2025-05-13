@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Link } from "components/documentation";
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 const QAS = [
   {
@@ -71,27 +72,7 @@ const QAS = [
       </>
     ),
   },
-  {
-    question: "Q3. Who created JotCV and why?",
-    answer: (
-      <p>
-        JotCV was created by{" "}
-        <Link href="https://github.com/xitanggg">Xitang Zhao</Link> and designed
-        by <Link href="https://www.linkedin.com/in/imzhi">Zhigang Wen</Link> as
-        a weekend project. As immigrants to the US, we had made many mistakes
-        when creating our first resumes and applying for internships and jobs.
-        It took us a long while to learn some of the best practices. While
-        mentoring first generation students and reviewing their resumes, we
-        noticed students were making the same mistakes that we had made before.
-        This led us to think about how we can be of help with the knowledge and
-        skills we have gained. We started chatting and working over the weekends
-        that led to JotCV, where we integrated best practices and our
-        knowledge into this resume builder. Our hope is that JotCV can help
-        anyone to easily create a modern professional resume that follows best
-        practices and enable anyone to apply for jobs with confidence.
-      </p>
-    ),
-  },
+
   {
     question: "Q4. How can I support JotCV?",
     answer: (
@@ -100,9 +81,9 @@ const QAS = [
           The best way to support JotCV is to share your thoughts and
           feedback with us to help further improve it. You can send us an email
           at{" "}
-          <Link href="mailto:hello@open-resume.com">hello@open-resume.com</Link>{" "}
+          <Link href="mailto:hello@jotcv.com">hello@jotcv.com</Link>{" "}
           or{" "}
-          <Link href="https://github.com/xitanggg/open-resume/issues/new">
+          <Link href="https://github.com/xitanggg/jotcv/issues/new">
             open an issue
           </Link>{" "}
           at our Github repository. Whether you like it or not, we would love to
@@ -115,7 +96,7 @@ const QAS = [
           with creating their resume, and your word-of-mouth support would be
           greatly appreciated. If you use Github, you can also show your support
           by{" "}
-          <Link href="https://github.com/xitanggg/open-resume">
+          <Link href="https://github.com/xitanggg/jotcv">
             giving the project a star
           </Link>{" "}
           to help increase its popularity and reach.
@@ -123,36 +104,91 @@ const QAS = [
       </>
     ),
   },
+  {
+    question: "Do I need to create an account to use JotCV?",
+    answer: "No, you don't need to create an account to use JotCV. You can start building your resume immediately without any sign-up process. All features are available instantly."
+  },
+  {
+    question: "Is JotCV really free to use?",
+    answer: "Yes, JotCV is completely free to use. There are no hidden charges, premium features, or subscription requirements. All features, including templates, AI suggestions, and export options, are available at no cost."
+  },
+  {
+    question: "What file formats can I download my resume in?",
+    answer: "You can download your resume in multiple formats including PDF, DOCX, and TXT. All formats are optimized for ATS (Applicant Tracking Systems) to ensure your resume gets through automated screening."
+  },
+  {
+    question: "How do I create a video resume?",
+    answer: "Creating a video resume is simple. Just click on the 'Add Video Resume' option in the resume builder. You can record directly through your device's camera or upload an existing video. The video will be attached to your resume and can be shared along with it."
+  },
+  {
+    question: "Are the resume templates ATS-friendly?",
+    answer: "Yes, all our resume templates are designed to be ATS-friendly. They follow best practices for formatting and structure to ensure your resume can be properly parsed by applicant tracking systems."
+  }
 ];
 
 export const QuestionsAndAnswers = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="py-20 bg-background-light">
-      <div className="max-w-3xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-text-primary text-center mb-12">
+    <div className="py-20">
+      <div className="max-w-4xl mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center mb-4">
           Frequently Asked Questions
         </h2>
+        <p className="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          Get quick answers to common questions about JotCV
+        </p>
+
         <div className="space-y-4">
           {QAS.map((faq, index) => (
-            <div key={index} className="card">
+            <div
+              key={index}
+              className="border border-gray-200 rounded-lg overflow-hidden bg-white/50 backdrop-blur-sm"
+            >
               <button
-                className="w-full p-4 text-left flex justify-between items-center"
+                className="w-full px-6 py-4 text-left bg-white/70 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-200"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <span className="font-semibold">{faq.question}</span>
-                <span className="text-xl">
-                  {openIndex === index ? '−' : '+'}
-                </span>
+                <div className="flex justify-between items-center">
+                  <span className="text-lg font-semibold text-gray-900">{faq.question}</span>
+                  {openIndex === index ? (
+                    <FaChevronUp className="w-5 h-5 text-gray-500" />
+                  ) : (
+                    <FaChevronDown className="w-5 h-5 text-gray-500" />
+                  )}
+                </div>
               </button>
+
               {openIndex === index && (
-                <div className="p-4 pt-0 text-text-secondary">
-                  {faq.answer}
+                <div className="px-6 py-4 bg-gray-50/50">
+                  <p className="text-gray-700">{faq.answer}</p>
                 </div>
               )}
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <Link
+            href="/faq"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            View All FAQs
+            <svg
+              className="ml-2 -mr-1 w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </Link>
         </div>
       </div>
     </div>
