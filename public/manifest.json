@@ -1,0 +1,71 @@
+{
+    "name": "JotCV - Professional Resume Builder",
+    "short_name": "JotCV",
+    "description": "Create professional, ATS-friendly resumes with JotCV. Free resume builder with modern templates and expert tips.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0ea5e9",
+    "icons": [
+        {
+            "src": "/icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "orientation": "portrait",
+    "categories": [
+        "productivity",
+        "business",
+        "utilities"
+    ],
+    "screenshots": [
+        {
+            "src": "/screenshots/home.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "platform": "wide",
+            "label": "JotCV Home Page"
+        },
+        {
+            "src": "/screenshots/builder.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "platform": "wide",
+            "label": "Resume Builder"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Create New Resume",
+            "short_name": "New Resume",
+            "description": "Start creating a new resume",
+            "url": "/resume-builder",
+            "icons": [
+                {
+                    "src": "/icons/new-resume.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "Browse Templates",
+            "short_name": "Templates",
+            "description": "Browse resume templates",
+            "url": "/templates",
+            "icons": [
+                {
+                    "src": "/icons/templates.png",
+                    "sizes": "192x192"
+                }
+            ]
+        }
+    ]
+}
