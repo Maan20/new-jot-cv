@@ -1,36 +1,35 @@
 import React from 'react';
-import { FaUserFriends, FaRobot, FaList, FaVideo, FaPalette, FaShieldAlt } from 'react-icons/fa';
 
-const features = [
+const reasons = [
     {
-        icon: <FaUserFriends className="w-8 h-8 text-blue-600" />,
-        title: "User-Friendly Platform",
-        description: "Our intuitive platform makes it easy for users of all skill levels to create professional resumes, even if you have no prior experience."
+        icon: <i className="fas fa-users w-12 h-12 text-blue-600" />,
+        title: "User-Friendly Interface",
+        description: "Our intuitive interface makes resume creation a breeze. No technical skills required."
     },
     {
-        icon: <FaRobot className="w-8 h-8 text-blue-600" />,
-        title: "AI-Powered Assistance",
-        description: "Our AI algorithms provide personalized recommendations and suggestions to enhance your resume's content and appearance."
+        icon: <i className="fas fa-robot w-12 h-12 text-blue-600" />,
+        title: "AI-Powered Suggestions",
+        description: "Get intelligent suggestions to improve your resume content and formatting."
     },
     {
-        icon: <FaList className="w-8 h-8 text-blue-600" />,
-        title: "Multiple Resume Sections",
-        description: "We offer a wide range of customizable sections, including experiences, projects, languages, and more, ensuring your resume fits your unique profile."
+        icon: <i className="fas fa-list w-12 h-12 text-blue-600" />,
+        title: "ATS-Optimized Templates",
+        description: "All our templates are designed to pass through Applicant Tracking Systems."
     },
     {
-        icon: <FaVideo className="w-8 h-8 text-blue-600" />,
-        title: "Video Resumes",
-        description: "Stand out from the crowd by creating customizable Video Resumes that showcase your personality and communication skills."
+        icon: <i className="fas fa-video w-12 h-12 text-blue-600" />,
+        title: "Video Resume Support",
+        description: "Create and attach video resumes to showcase your personality."
     },
     {
-        icon: <FaPalette className="w-8 h-8 text-blue-600" />,
-        title: "Unique Templates",
-        description: "Explore our vast collection of unique templates, inspired by the creativity of Zety, NovoResume, kickresume, EnhanCv, and more."
+        icon: <i className="fas fa-palette w-12 h-12 text-blue-600" />,
+        title: "Professional Templates",
+        description: "Choose from a variety of professionally designed templates."
     },
     {
-        icon: <FaShieldAlt className="w-8 h-8 text-blue-600" />,
-        title: "Privacy & Security",
-        description: "Your data's security is our utmost priority. We guarantee the protection of your personal information."
+        icon: <i className="fas fa-shield-alt w-12 h-12 text-blue-600" />,
+        title: "Data Security",
+        description: "Your data stays on your device. We don't store your information."
     }
 ];
 
@@ -40,13 +39,13 @@ export default function WhyChooseUsPage() {
             <h1 className="text-4xl font-bold text-center mb-12">Why Choose JotCV?</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index) => (
+                {reasons.map((reason, index) => (
                     <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                         <div className="mb-4">
-                            {feature.icon}
+                            {reason.icon}
                         </div>
-                        <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                        <p className="text-gray-700">{feature.description}</p>
+                        <h3 className="text-xl font-semibold mb-3">{reason.title}</h3>
+                        <p className="text-gray-700">{reason.description}</p>
                     </div>
                 ))}
             </div>
