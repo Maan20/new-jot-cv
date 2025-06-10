@@ -50,7 +50,7 @@ const ResumeControlBar = ({
       };
 
       // Save resume data to API
-      const response = await fetch('http://localhost:8000/api/resumes/', {
+      const response = await fetch('https://api.jotcv.com/api/resumes/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
